@@ -56,15 +56,9 @@ function discFetch() {
 };
 // add disc to each list
 function addDisc(disc, discList) {
-	// start with li element and add discListItems class
-	discList.push(`<li class="discListItems" onclick="displayDisc(${discNumber})">`);
-	// add disc Name
-	discList.push(disc.discName);
-	//add strong disc speed and wrap li
-	discList.push(`<strong class='speedList'>${disc.speed}</strong></li>`);
-
-
-
+	let htmlContent = `<li class="discListItems" onclick="displayDisc(${discNumber})">${disc.discName}
+			<strong class="speedList">${disc.speed}</strong></li>`;
+	discList.push(htmlContent);
 	discNumber++;
 };
 

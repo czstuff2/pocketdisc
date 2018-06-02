@@ -27,7 +27,7 @@ function discFetch() {
 
 // sort discs
 function sortDiscs(discs) {
-	discraftDiscs = discs
+	latitudeDiscs = discs
 	let appendManuTitle = "<span> (Lat64)</span>";
 	$('.header_title').append(appendManuTitle);
 	for (let disc of discs) {
@@ -46,10 +46,10 @@ function sortDiscs(discs) {
 		// if the disc is a Putter 
 		else {
 		addDisc(disc, arrayPutter);	
-		};	
+		};
+	};
 	// add to elements
 	updateDiscLists();
-	};
 };
 
 // add disc to each list

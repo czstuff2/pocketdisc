@@ -45,11 +45,11 @@ function sortDiscs(discs) {
 		}
 		// if the disc is a Putter 
 		else {
-		addDisc(disc, arrayPutter);	
+			addDisc(disc, arrayPutter);	
 		};	
+	};
 	// add to elements
 	updateDiscLists();
-	};
 };
 
 // add disc to each list

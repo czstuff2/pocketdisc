@@ -47,15 +47,16 @@ function sortDiscs(discs) {
 		else {
 		addDisc(disc, arrayPutter);	
 		};	
+	};
 	// add to elements
 	updateDiscLists();
-	};
 };
 // add disc to each list
 function addDisc(disc, discList) {
 	let htmlContent = `<li class="discListItems" onclick="displayDisc(${discNumber})">${disc.discName}
 			<strong class="speedList">${disc.speed}</strong></li>`;
 	discList.push(htmlContent);
+	htmlContent = '';
 	discNumber++;
 };
 

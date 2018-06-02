@@ -24,12 +24,12 @@ $('.header_title').append(appendManuTitle);
 // Fetch Innova Discs
 function discFetch() {
 	fetch(myRequest)
-		.then(function(response) {return response.json();})
-		.then(function(data) {
-			discraftDiscs = data;
+		.then( response => response.json())
+		.then(function(discs) {
+			discraftDiscs = discs;
 			
 			//sort through all discs and save each discType into a saved variable
-			for (let disc of data) {
+			for (let disc of discs) {
 				// If the disc is a driver, save to own variable
 				if (disc.type === "dd") {
 					addDisc(disc, arrayDriver);
@@ -53,15 +53,9 @@ function discFetch() {
 };
 // add disc to each list
 function addDisc(disc, discList) {
-	// start with li element and add discListItems class
-	discList.push('<li class="discListItems" onClick="displayDisc(' + discNumber + ')">');
-	// add disc Name
-	discList.push(disc.discName);
-	//add strong disc speed and wrap li
-	discList.push('<strong class="speedList">' + disc.speed + '</strong></li>');
-
-
-
+	let htmlContent = `<li class="discListItems" onclick="displayDisc(${discNumber})">${disc.discName}
+			<strong class="speedList">${disc.speed}</strong></li>`;
+	discList.push(htmlContent);
 	discNumber++;
 };
 

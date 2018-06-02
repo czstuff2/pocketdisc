@@ -24,15 +24,15 @@ discFetch();
 function discFetch() {
 	fetch(myRequest)
 		.then( response => response.json())
-		.then(function(data) {
-			innovaDiscs = data;	
+		.then(function(discs) {
+			innovaDiscs = discs;	
 
 
 		let appendManuTitle = "<span> (Innova)</span>";
 		$('.header_title').append(appendManuTitle);
 			
 			//sort through all discs and save each discType into a saved variable
-			for (let disc of data) {
+			for (let disc of discs) {
 				// If the disc is a driver, save to own variable
 				if (disc.speed >= 9) {
 					addDisc(disc, arrayDriver);

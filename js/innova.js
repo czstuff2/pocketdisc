@@ -85,25 +85,28 @@ function displayDisc(discNumber) {
 	// Edit Disc Name 
 	$('#dialog').dialog("option", "title", currentDiscName);
 
-	//generate discContentStatsHolder 
-	let arrayStats = [];
-	arrayStats.push('<div class="discContentImgHolder"><img src="images/innova/' + currentDiscName.toLowerCase() + '-fp.jpg" alt=""></div>');
-	arrayStats.push('<div class="discContentStatsHolder"><div class="topContainment">');
-	arrayStats.push('<div class="borderContainer"><div>' + currentDisc.speed + '<span>Speed</span></div></div>');
-	arrayStats.push('<div class="borderContainer"><div>' + currentDisc.glide + '<span>Glide</span></div></div></div>');
-	arrayStats.push('<div class="bottomContainment">');
-	arrayStats.push('<div class="borderContainer"><div>' + currentDisc.turn + '<span>Turn</span></div></div>');
-	arrayStats.push('<div class="borderContainer"><div>' + currentDisc.fade + '<span>Fade</span></div></div></div>');
-	$('.discContentContainer').append(arrayStats.join(''));	
 
-	// generate discContentDetails
-	let arrayDetails = [];
-	arrayDetails.push('<div class="discDescription">' + currentDisc.description + '</div>');
-	arrayDetails.push('<div class="discDescriptionStats">');
-	arrayDetails.push('<div>Diameter: <strong>' + currentDisc.diameter + '</strong></div>');
-	arrayDetails.push('<div>Rim Width: <strong>' + currentDisc.rimWidth + '</strong></div>');
-	arrayDetails.push('<div>Available Plastics: <strong>' + currentDisc.plastics + '</strong></div></div>');
-	$('.discContentDetails').append(arrayDetails.join(''));	 
+	let htmlContent = `<div class"discContentImgHolder">
+			<img src="images/innova/${currentDiscName.toLowerCase()}-fp.jpg" alt=""></div>
+			<div class="discContentStatsHolder"><div class="topContainment">
+			<div class="borderContainer"><div>${currentDisc.speed}<span>Speed</span></div></div>
+			<div class="borderContainer"><div>${currentDisc.glide}<span>Glide</span></div></div></div>
+			<div class="bottomContainment">
+			<div class="borderContainer"><div>${currentDisc.turn}<span>Turn</span></div></div>
+			<div class="borderContainer"><div>${currentDisc.fade}<span>Fade</span></div></div></div>`;
+
+	const discContentContainer = document.querySelector('.discContentContainer');
+	discContentContainer.insertAdjacentHTML('beforeend', htmlContent);
+
+	htmlContent = `<div class="discDescription">${currentDisc.description}</div>
+		<div class="discDescriptionStats">
+		<div>Diameter: <strong>${currentDisc.diameter}</strong></div>
+		<div>Rim Width: <strong>${currentDisc.rimWidth}</strong></div>
+		<div>Available Plastics: <strong>${currentDisc.plastics}</strong></div></div>`;
+
+	const discContentDetailsContainer = document.querySelector('.discContentDetails');
+	discContentDetailsContainer.insertAdjacentHTML('beforeend', htmlContent);
+
 	$('#dialog').dialog( "open" );
 }; 
 

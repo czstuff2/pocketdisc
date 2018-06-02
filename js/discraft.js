@@ -84,23 +84,29 @@ function displayDisc(discNumber) {
 	$('#dialog').dialog("option", "title", currentDiscName);
 
 	//generate discContentStatsHolder 
-	let arrayStats = [];
-	arrayStats.push('<div class="discContentImgHolder"><img src="images/discraft/' + currentDisc.img + '" alt=""></div>');
-	arrayStats.push('<div class="discContentStatsHolder"><div class="topContainment">');
-	arrayStats.push('<div class="borderContainer"><div>' + currentDisc.speed + '<span>Speed</span></div></div>');
-	arrayStats.push('<div class="borderContainer"><div>' + currentDisc.glide + '<span>Glide</span></div></div></div>');
-	arrayStats.push('<div class="bottomContainment">');
-	arrayStats.push('<div class="borderContainer"><div>' + currentDisc.turn + '<span>Turn</span></div></div>');
-	arrayStats.push('<div class="borderContainer"><div>' + currentDisc.fade + '<span>Fade</span></div></div></div>');
-	$('.discContentContainer').append(arrayStats.join(''));	
+	let htmlContent = `<div class="discContentImgHolder">
+			<img class="discImg" src="images/discraft/${currentDisc.img}" alt=""></div>
+			<div class="discContentStatsHolder">
+			<div class="topContainment">
+			<div class="borderContainer"><div>${currentDisc.speed}<span>Speed</span></div></div>
+			<div class="borderContainer"><div>${currentDisc.glide}<span>Glide</span></div></div></div>
+			<div class="bottomContainment">
+			<div class="borderContainer"><div>${currentDisc.turn}<span>Turn></span></div></div>
+			<div class="borderContainer"><div>${currentDisc.fade}<span>Fade></span></div></div></div>`;
+
+	const discContentContainer = document.querySelector('.discContentContainer');
+	discContentContainer.insertAdjacentHTML('beforeend', htmlContent);
 
 	// generate discContentDetails
-	let arrayDetails = [];
-	arrayDetails.push('<div class="discDescription">' + currentDisc.description + '</div>');
-	arrayDetails.push('<div class="discDescriptionStats">');
-	arrayDetails.push('<div>Stability: <strong>' + currentDisc.stability + '</strong></div>');
-	arrayDetails.push('<div>Available Plastics: <strong>' + currentDisc.plastics + '</strong></div></div>');
-	$('.discContentDetails').append(arrayDetails.join(''));	 
+	htmlContent = `<div class="discDescription">${currentDisc.description}</div>
+		<div class="discDescriptionStats">
+		<div>Stability: <strong>${currentDisc.stability}</strong></div>
+		<div>Available Plastics: <strong>${currentDisc.plastics}</strong></div></div>`;
+
+	const discContentDetailsContainer = document.querySelector('.discContentDetails');
+	discContentDetailsContainer.insertAdjacentHTML('beforeend', htmlContent);
+
+
 	$('#dialog').dialog( "open" );
 }; 
 

@@ -18,39 +18,40 @@ let myRequest = new Request('http://fidhub.com/pocketdisc/data/latitude-discs.js
 $('#tabs').tabs();
 discFetch();
 
-let appendManuTitle = "<span> (Lat64)</span>";
-$('.header_title').append(appendManuTitle);
-
 // Fetch Innova Discs
 function discFetch() {
 	fetch(myRequest)
 		.then( response => response.json())
-		.then(function(discs) {
-			latitudeDiscs = discs;
-			
-			//sort through all discs and save each discType into a saved variable
-			for (let disc of discs) {
-				// If the disc is a driver, save to own variable
-				if (disc.type === "d") {
-					addDisc(disc, arrayDriver);
-				}
-				// If the disc is a fairway driver
-				else if (disc.type === "fd") {
-					addDisc(disc, arrayFairway);
-				}
-				// If the disc is a Mid-Range
-				else if (disc.type === "m") {
-					addDisc(disc, arrayMid);
-				}
-				// if the disc is a Putter 
-				else {
-					addDisc(disc, arrayPutter);
-				};
-			};
-			// add to elemenets
-			updateDiscLists();
-		});
+		.then(sortDiscs);
 };
+
+// sort discs
+function sortDiscs(discs) {
+	discraftDiscs = discs
+	let appendManuTitle = "<span> (Lat64)</span>";
+	$('.header_title').append(appendManuTitle);
+	for (let disc of discs) {
+		// If the disc is a driver, save to own variable
+		if (disc.type === "d") {
+			addDisc(disc, arrayDriver);
+		}
+		// If the disc is a fairway driver
+		else if (disc.type === "fd") {
+			addDisc(disc, arrayFairway);
+		}
+		// If the disc is a Mid-Range
+		else if (disc.type === "m") {
+			addDisc(disc, arrayMid);
+		}
+		// if the disc is a Putter 
+		else {
+		addDisc(disc, arrayPutter);	
+		};	
+	// add to elements
+	updateDiscLists();
+	};
+};
+
 // add disc to each list
 function addDisc(disc, discList) {
 	let htmlContent = `<li class="discListItems" onclick="displayDisc(${discNumber})">${disc.discName}

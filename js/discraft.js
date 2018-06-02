@@ -70,7 +70,7 @@ function updateDiscLists() {
 
 function displayDisc(discNumber) {
 	if ($('#dialog').dialog("isOpen")) {
-			$('#dialog').dialog("close");
+		$('#dialog').dialog("close");
 	};
 	if ($('discContentStatsHolder')) { 
 		
@@ -85,7 +85,7 @@ function displayDisc(discNumber) {
 
 	//generate discContentStatsHolder 
 	let htmlContent = `<div class="discContentImgHolder">
-		<img class="discImg" src="images/discraft/${currentDisc.img}" alt=""></div>
+		<img class="discImgDiscraft" src="images/discraft/${currentDisc.img}" alt=""></div>
 		<div class="discContentStatsHolder">
 		<div class="topContainment">
 		<div class="borderContainer"><div>${currentDisc.speed}<span>Speed</span></div></div>

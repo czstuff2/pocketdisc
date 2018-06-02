@@ -1,0 +1,72 @@
+.header_menu {
+  display: none;
+}
+
+@media screen and (max-width: 549px) {
+  .header_logo {
+    height: 48px;
+    margin-right: 0.5em;
+  }
+  .header_title {
+    margin-left: 0;
+    font-size: 2em;
+    vertical-align: bottom; 
+  }
+  .nav {
+    z-index: 10;
+    background-color: #fff;
+    width: 300px;
+    position: absolute;
+    /* This trasform moves the drawer off canvas. */
+    -webkit-transform: translate(-300px, 0);
+    transform: translate(-300px, 0);
+    /* Optionally, we animate the drawer. */
+    transition: transform 0.3s ease;
+  }
+  .nav.open {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  .nav_item {
+    display: list-item;
+    border-bottom: 1px solid #E0E0E0;
+    width: 100%;
+    text-align: left;
+  }
+  .header_menu {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    padding: 1em;
+  }
+  .header_menu svg {
+    width: 32px;
+    fill: black;
+  }
+}
+
+
+@media screen and (min-width: 360px) {
+
+body {
+	font-size: 14px;
+}
+
+
+
+}
+
+@media screen and (min-width: 450px) {
+	.ui-dialog {
+		width: 90%; !important;
+	}
+}
+
+@media screen and (min-width: 550px) {
+}
+
+@media screen and (min-width: 600px) {
+  .ui-dialog {
+    width: 70% !important;
+  }
+}

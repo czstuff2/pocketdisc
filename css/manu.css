@@ -1,0 +1,171 @@
+body, html {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	font-family: Roboto;
+	font-size: 12px;
+	color: #424242;
+}
+h1, h2, h3, h4, h5 {
+	margin: 0;
+}
+
+header, nav, footer, section, article, div {
+	box-sizing: border-box;
+}
+
+img, embed, object, video {
+	max-width: 100%;
+}
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+/* 
+Header
+*/
+.header {
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+	min-height: 56px;
+	transition: min-height 0.3s;
+}
+.header_inner {
+	width: 100%;
+	margin-left: 0;
+	margin-right: auto;
+}
+.header_logo {
+	height: 48px;
+	margin-right: 0.5em;
+}
+.header_title {
+	font-size: 2em;
+	margin-left: 0;
+	display: inline-block;
+	vertical-align: bottom;
+  	color: #212121;
+}
+/*
+*
+*
+Top-Level Navigation
+*
+*
+*/
+
+.nav_list {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+.nav.open {
+	-webkit-transform: translate(0, 0);
+	transform: translate(0, 0);
+}
+.nav_item {
+	box-sizing: border-box;
+	display: list-item;
+	width: 100%;
+	text-align: left;
+	line-height: 24px;
+	padding: 24px;
+	text-transform: uppercase;
+	border-bottom: 1px solid #E0E0E0;
+}
+.header_menu {
+	display: inline-block;
+	position: absolute;
+	right: 0;
+	padding: 1em;
+}
+.header_menu svg {
+	width: 32px;
+	fill: black;
+}
+.nav a {
+	text-decoration: none;
+	color: #616161;
+	padding: 1.5em;
+}
+
+.discListItems {
+	box-sizing: border-box;
+	display: list-item;
+	width: 100%;
+	text-align: left;
+	line-height: 24px;
+	padding: 24px;
+	text-transform: uppercase;
+	border-bottom: 1px solid #E0E0E0;
+}
+.discListItems strong {
+	float: right;
+}
+
+
+/* Disc Info Display */
+.discContentContainer {
+	display: flex;
+}
+
+.discContentImgHolder {
+	order: 0;
+	width: 85%;
+}
+.discContentStatsHolder {
+	width: 15%;
+	margin-top: 5em;
+}
+.statsHolder {
+	display: flex;
+}
+.topContainment, .bottomContainment {
+	/* flex at higher reso */
+	width: 100%;
+}
+.topContainment div div, .bottomContainment div div {
+	font-size: 2.5em;
+	width: 50%;
+}
+.topContainment div div span, .bottomContainment div div span {
+	display: block;
+	font-size: 0.3333333em;
+}
+.topContainment .borderContainer, .bottomContainment .borderContainer {
+
+	border-style: solid;
+	border-width: 1px;
+}
+.discDescription {
+	margin-top: 12px;
+	padding: 1em;
+	font-size: 1.2em;
+	line-height: 1.5em;
+}
+.discDescriptionStats {
+	margin-top: 0.5em;
+	padding: 1em;
+	font-size: 1.2em;
+}
+.discDescriptionStats div {
+	font-style: italic;
+	color: #2ABC38;
+}
+.discDescriptionStats div strong {
+	color: initial;
+}
+
+#dialog {
+	display: none;
+}
+
+/* Sticky Footer */
+#footer { 
+	height: 100px; 
+}

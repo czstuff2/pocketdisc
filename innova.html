@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset=utf-8>
+	<meta name=description content="">
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<title>Pocket Disc - Innova</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+	<link rel=stylesheet href="css/manu.css">
+	<link rel=stylesheet href="css/manu-responsive.css">
+</head>
+<body>
+
+	<header id="header" class="header">
+		<div class="header_inner">
+			<img class="header_logo" src="images/DGS_LOGO_BW_818px.png" alt="logo">
+			<h1 class="header_title">
+				Pocket Disc
+			</h1>
+			<a id="menu" class="header_menu">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+					<path d="M2 6h20v3H2zm0 5h20v3H2zm0 5h20v3H2z"/>
+				</svg>
+			</a>
+		</div>
+	</header><!-- /header -->
+
+	<nav class="nav">
+	    <ul class="nav_list">
+	        <li class="nav_item"><a href="index.html">Home</a></li><!--
+	     <li class="nav_item"><a href="#types">Disc Types</a></li><!--
+	     -<li class="nav_item"><a href="#colors">Colors</a></li><!--
+	     -<li class="nav_item"><a href="#contact">Contact</a></li>-->
+	    </ul>
+	</nav>
+	
+	<main>
+		<section class="content">
+			<div id="tabs">
+				<ul>
+					<li><a href="#tabs-1">Driver</a></li>
+					<li><a href="#tabs-2">Fairway</a></li>
+					<li><a href="#tabs-3">Mid-Range</a></li>
+					<li><a href="#tabs-4">Putter</a></li>
+				</ul>
+				<div id="tabs-1">
+					<ul class="shownDrivers"></ul>
+				</div>
+				<div id="tabs-2">
+					<ul class="shownFairways"></ul>
+				</div>
+				<div id="tabs-3">
+					<ul class="shownMids"></ul>
+				</div>
+				<div id="tabs-4">
+					<ul class="shownPutters"></ul>
+				</div>
+			</div>
+			<div id="dialog">
+				<section class="discContent">
+					<h2></h2>
+					<div class="discContentContainer">
+						<div class="discContentImgHolder">
+							<img src="images/discraft-logo.jpg" alt="">
+						</div>
+					</div>
+					<div class="discContentDetails">
+						
+					</div>
+				</section>
+			</div>
+		</section>
+	</main>
+	<script src="js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery-ui.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/innova.js" type="text/javascript" charset="utf-8" async defer></script>
+	<script type="text/javascript" src="cordova.js"></script>
+	<script>
+      /*
+       * Open the drawer when the menu ison is clicked.
+       */
+      var menu = document.querySelector('#menu');// ID
+      var main2 = document.querySelector('main');// Element
+      var drawer = document.querySelector('.nav');// Class
+
+      menu.addEventListener('click', function(e) {
+        drawer.classList.toggle('open');
+        e.stopPropagation();
+      });
+      main2.addEventListener('click', function() {
+        drawer.classList.remove('open');
+      });
+
+    </script>
+</body>
+</html>

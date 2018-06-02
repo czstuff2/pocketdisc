@@ -87,7 +87,7 @@ function displayDisc(discNumber) {
 
 
 	let htmlContent = `<div class"discContentImgHolder">
-			<img src="images/innova/${currentDiscName.toLowerCase()}-fp.jpg" alt=""></div>
+			<img class="discImg" src="images/innova/${currentDiscName.toLowerCase()}-fp.jpg" alt=""></div>
 			<div class="discContentStatsHolder"><div class="topContainment">
 			<div class="borderContainer"><div>${currentDisc.speed}<span>Speed</span></div></div>
 			<div class="borderContainer"><div>${currentDisc.glide}<span>Glide</span></div></div></div>

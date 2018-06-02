@@ -108,7 +108,7 @@ function displayDisc(discNumber) {
 
 
 	$('#dialog').dialog( "open" );
-	const dialogTitle = document.querySelector('.ui-dialog-title');
+	const dialogTitle = document.querySelector('.ui-icon-closethick');
 	dialogTitle.setAttribute('tabindex', -1);
 	dialogTitle.focus();
 }; 

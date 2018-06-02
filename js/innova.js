@@ -18,14 +18,13 @@ let myRequest = new Request('http://fidhub.com/data/innova-discs.json');
 $('#tabs').tabs();
 discFetch();
 
-
-
 // Fetch Innova Discs
 function discFetch() {
 	fetch(myRequest)
 		.then( response => response.json())
 		.then(sortDiscs);
 };
+
 // sort discs
 function sortDiscs(discs) {
 	innovaDiscs = discs;

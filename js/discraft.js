@@ -85,14 +85,14 @@ function displayDisc(discNumber) {
 
 	//generate discContentStatsHolder 
 	let htmlContent = `<div class="discContentImgHolder">
-			<img class="discImg" src="images/discraft/${currentDisc.img}" alt=""></div>
-			<div class="discContentStatsHolder">
-			<div class="topContainment">
-			<div class="borderContainer"><div>${currentDisc.speed}<span>Speed</span></div></div>
-			<div class="borderContainer"><div>${currentDisc.glide}<span>Glide</span></div></div></div>
-			<div class="bottomContainment">
-			<div class="borderContainer"><div>${currentDisc.turn}<span>Turn></span></div></div>
-			<div class="borderContainer"><div>${currentDisc.fade}<span>Fade></span></div></div></div>`;
+		<img class="discImg" src="images/discraft/${currentDisc.img}" alt=""></div>
+		<div class="discContentStatsHolder">
+		<div class="topContainment">
+		<div class="borderContainer"><div>${currentDisc.speed}<span>Speed</span></div></div>
+		<div class="borderContainer"><div>${currentDisc.glide}<span>Glide</span></div></div></div>
+		<div class="bottomContainment">
+		<div class="borderContainer"><div>${currentDisc.turn}<span>Turn></span></div></div>
+		<div class="borderContainer"><div>${currentDisc.fade}<span>Fade></span></div></div></div>`;
 
 	const discContentContainer = document.querySelector('.discContentContainer');
 	discContentContainer.insertAdjacentHTML('beforeend', htmlContent);

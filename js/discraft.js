@@ -1,4 +1,4 @@
-let innovaDiscs, innovaDrivers, innovaFairway, innovaMid, innovaPutters;
+let discraftDiscs, discraftDrivers, discraftFairway, discraftMid, discraftPutters;
 // pull ul class elements for each discType
 let driverList = $('.shownDrivers');
 let fairwayList = $('.shownFairways');
@@ -26,7 +26,7 @@ function discFetch() {
 	fetch(myRequest)
 		.then(function(response) {return response.json();})
 		.then(function(data) {
-			innovaDiscs = data;
+			discraftDiscs = data;
 			
 			//sort through all discs and save each discType into a saved variable
 			for (let disc of data) {
@@ -83,7 +83,7 @@ function displayDisc(discNumber) {
 		$('.discContentDetails').empty();
 
 	}
-	let currentDisc = innovaDiscs[discNumber];
+	let currentDisc = discraftDiscs[discNumber];
 	let currentDiscName = currentDisc.discName;
 	// Edit Disc Name 
 	$('#dialog').dialog("option", "title", currentDiscName);

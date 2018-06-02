@@ -1,4 +1,4 @@
-let discraftDiscs, discraftDrivers, discraftFairway, discraftMid, discraftPutters;
+let discraftDiscs;
 // pull ul class elements for each discType
 let driverList = $('.shownDrivers');
 let fairwayList = $('.shownFairways');

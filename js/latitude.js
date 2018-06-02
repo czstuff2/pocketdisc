@@ -1,4 +1,4 @@
-let latitudeDiscs, latitudeDrivers, latitudeFairway, latitudeMid, latitudePutters;
+let latitudeDiscs;
 // pull ul class elements for each discType
 let driverList = $('.shownDrivers');
 let fairwayList = $('.shownFairways');

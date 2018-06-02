@@ -1,4 +1,4 @@
-let innovaDiscs, innovaDrivers, innovaFairway, innovaMid, innovaPutters;
+let innovaDiscs;
 // pull ul class elements for each discType
 let driverList = $('.shownDrivers');
 let fairwayList = $('.shownFairways');

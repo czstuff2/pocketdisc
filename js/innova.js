@@ -13,7 +13,7 @@ let arrayPutter = [];
 let discNumber = 0;
 let widthOfViewport = $(window).width();
 
-let myRequest = new Request('https://fidhub.com/data/innova-discs.json');
+let myRequest = new Request('http://fidhub.com/data/innova-discs.json');
 
 $('#tabs').tabs();
 discFetch();

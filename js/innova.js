@@ -23,7 +23,7 @@ discFetch();
 // Fetch Innova Discs
 function discFetch() {
 	fetch(myRequest)
-		.then(function(response) {return response.json();})
+		.then( response => response.json())
 		.then(function(data) {
 			innovaDiscs = data;	
 
@@ -57,11 +57,11 @@ function discFetch() {
 // add disc to each list
 function addDisc(disc, discList) {
 	// start with li element and add discListItems class
-	discList.push('<li class="discListItems" onClick="displayDisc(' + discNumber + ')">');
+	discList.push(`<li class="discListItems" onclick="displayDisc(${discNumber})">`);
 	// add disc Name
 	discList.push(disc.discName);
 	//add strong disc speed and wrap li
-	discList.push('<strong class="speedList">' + disc.speed + '</strong></li>');
+	discList.push(`<strong class='speedList'>${disc.speed}</strong></li>`);
 
 
 

@@ -41,3 +41,5 @@ node_modules
 build
 npm-debug.log
 pointless_change
+
+package.json

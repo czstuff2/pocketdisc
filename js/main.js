@@ -1,17 +1,17 @@
-let innovaEl = $("#innova-entry");
+let innovaEl = document.getElementById('innova-entry')
 
-innovaEl.on('click', function(e) {
+innovaEl.addEventListener('click', function(e) {
 	window.location.href = 'innova.html';
 })
 
-let discraftEl = $("#discraft-entry");;
+let discraftEl = document.getElementById("discraft-entry");;
 
-discraftEl.on('click', function(e) {
+discraftEl.addEventListener('click', function(e) {
 	window.location.href = 'discraft.html';
 })
-let latitudeEl = $("#latitude-entry");;
+let latitudeEl = document.getElementById("latitude-entry");;
 
-latitudeEl.on('click', function(e) {
+latitudeEl.addEventListener('click', function(e) {
 	window.location.href = 'latitude.html';
 })
 

@@ -1,9 +1,9 @@
 let innovaDiscs;
 // pull ul class elements for each discType
-let driverList = document.getElementByClassName('shownDrivers');
-let fairwayList = document.getElementByClassName('shownFairways');
-let midList = document.getElementByClassName('shownMids');
-let putterList = document.getElementByClassName('shownPutters');
+let driverList = document.querySelector('.shownDrivers');
+let fairwayList = document.querySelector('.shownFairways');
+let midList = document.querySelector('.shownMids');
+let putterList = document.querySelector('.shownPutters');
 // create arrays for each discType
 let arrayDriver = [];
 let arrayFairway = [];
@@ -30,7 +30,7 @@ function sortDiscs(discs) {
 	innovaDiscs = discs;
 	const appendManuTitle = document.createElement('span')
 	appendManuTitle.innerHTML = " (Innova)";
-	const headerTitle = document.getElementByClassName('header_title')
+	const headerTitle = document.querySelector('.header_title')
 	headerTitle.append(appendManuTitle);
 	for (let disc of discs) {
 		// If the disc is a driver, save to own variable

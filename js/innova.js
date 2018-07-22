@@ -5,15 +5,15 @@ let fairwayList = document.querySelector('.shownFairways');
 let midList = document.querySelector('.shownMids');
 let putterList = document.querySelector('.shownPutters');
 // create arrays for each discType
-let arrayDriver = [];
-let arrayFairway = [];
-let arrayMid = [];
-let arrayPutter = [];
+let arrayDriver = []
+let arrayFairway = []
+let arrayMid = []
+let arrayPutter = []
 // # of iterations
 let discNumber = 0;
 let widthOfViewport = $(window).width();
 
-let myRequest = new Request('http://fidhub.com/data/innova-discs.json');
+let myRequest = new Request('https://thomasscottmiller.com/data/innova-discs.json');
 
 $('#tabs').tabs();
 discFetch();
@@ -58,16 +58,16 @@ function addDisc(disc, discList) {
 	let htmlContent = `<li class="discListItems" onclick="displayDisc(${discNumber})">${disc.discName}
 			<strong class="speedList">${disc.speed}</strong></li>`;
 	discList.push(htmlContent);
-	htmlContent = '';
+	// htmlContent = '';
 	discNumber++;
 };
 
 //add to page
 function updateDiscLists() {
-	driverList.append(arrayDriver.join(''));
-	fairwayList.append(arrayFairway.join(''));
-	midList.append(arrayMid.join(''));
-	putterList.append(arrayPutter.join(''));
+	driverList.innerHTML = arrayDriver.join('');
+	fairwayList.innerHTML = arrayFairway.join('');
+	midList.innerHTML = arrayMid.join('');
+	putterList.innerHTML = arrayPutter.join('');
 };
 
 function displayDisc(discNumber) {
